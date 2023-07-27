@@ -169,6 +169,7 @@ def main():
     running_loss = 0.0
     running_tar_loss = 0.0
     ite_num4val = 0
+    val_loss_max = 0.0
     results = {'train_loss': [], 'train_Tar':[],'val_IoU': []}
 
     for epoch in range(1, epoch_num+1):
@@ -252,8 +253,8 @@ def main():
                 val_bar.set_description(desc='IoU: %.4f' % (inter * 1.0 / unin))
             valing_results['IoU'] = inter * 1.0 / unin
             val_loss = valing_results['IoU']
-            if val_loss > 0.35 or epoch%5==0:
-                mloss = val_loss
+            if val_loss > val_loss_max:
+                val_loss_max = val_loss
                 torch.save(net.state_dict(),  model_dir+'netCD_epoch_%d_val_iou_%.4f.pth' % (epoch, val_loss))
             results['train_loss'].append(running_results['CD_loss'] / running_results['batch_sizes'])
             results['train_Tar'].append(running_results['Tar_loss'] / running_results['batch_sizes'])
