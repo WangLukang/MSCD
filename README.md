@@ -8,7 +8,7 @@ To effectively utilize our MSFF-CDNet model, ensure that your environment meets 
 - PyTorch 1.8 
 
 ## Train
-To train the MSFF-CDNet model on your own dataset, simply modify the training and testing paths in the `train.py` file.
+To train the MSFF-CDNet model on your own dataset, simply modify the train and val paths in the `train.py` file.
 
 ## Test
 Just run the `test.py` script to evaluate the MSFF-CDNet model on your data.
