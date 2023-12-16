@@ -1,6 +1,6 @@
 # MSFF-CDNet: A Multi-Scale Feature Fusion Change Detection Network for Bi-temporal High-Resolution Remote Sensing Image
 
-You can access the paper at (link to be updated).
+You can access the paper at (https://ieeexplore.ieee.org/document/10220085/).
 
 ## Requirements
 To effectively utilize our MSFF-CDNet model, ensure that your environment meets the following requirements:
